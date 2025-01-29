@@ -15,7 +15,7 @@ SET compilerFlags=-g -shared -Wvarargs -Wall -Werror
 REM -Wall -Werror
 SET includeFlags=-I./src
 SET linkerFlags=-luser32 -lopengl32
-SET defines=-DSDB_DEBUG -DSDB_EXPORT -D_CRT_SECURE_NO_WARNINGS
+SET defines=-D_DEBUG -DSDB_EXPORT -D_CRT_SECURE_NO_WARNINGS
 
 ECHO "Building %assembly%%..."
 clang %cFilenames% %compilerFlags% -o ../bin/%assembly%.dll %defines% %includeFlags% %linkerFlags%
